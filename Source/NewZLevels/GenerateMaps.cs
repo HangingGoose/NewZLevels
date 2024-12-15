@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Verse;
 
@@ -9,6 +10,7 @@ namespace NewZLevels
         {
             int width = sourceMap.Size.x;
             int height = sourceMap.Size.z;
+            int depth = sourceMap.Size.y;
 
             Log.Message("Creating pocket map...");
             MapGeneratorDef undergroundDef = DefDatabase<MapGeneratorDef>.GetNamed("NZL_Underground");
@@ -18,12 +20,15 @@ namespace NewZLevels
                 return null;
             }
 
-            Map pocketMap = MapGenerator.GenerateMap(
-                new IntVec3(width, 0, height),
-                null, undergroundDef,
+            Log.Message(String.Format("Y value of cells:") + sourceMap.AllCells.First().y);
+            Log.Message(String.Format("Width: {0}", width));
+            Log.Message(String.Format("Height: {0}", height));
+
+            Map pocketMap = PocketMapUtility.GeneratePocketMap(
+                new IntVec3(width, depth, height),
+                undergroundDef,
                 null,
-                null,
-                true
+                sourceMap
             );
 
             if (pocketMap == null || !pocketMap.AllCells.Any())

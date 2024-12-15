@@ -59,6 +59,7 @@ namespace NewZLevels
                 return;
             }
 
+            Log.Message(String.Format("Current map cells: {0}", this.Map.AllCells.Count()));
             Map pocketMap = GenerateMaps.CreateUndergroundPocketMap(this.Map, ZLevel - 1);
             if (pocketMap == null)
             {
@@ -71,16 +72,31 @@ namespace NewZLevels
             this.Map.mapPawns.DeRegisterPawn(pawn);
             pawn.DeSpawn();
 
-            IntVec3 ladderPosition = new IntVec3(this.Position.x, 0, this.Position.z);
-            foreach (IntVec3 cell in pocketMap.AllCells)
-            {
-                Log.Message(String.Format("Cell ({0},{1}) exists", cell.x, cell.z));
-            }
+            IntVec3 ladderPosition = new IntVec3(this.Position.x, this.Position.y, this.Position.z);
+
             if (!ladderPosition.IsValid || !pocketMap.AllCells.Contains(ladderPosition))
             {
                 Log.Warning("Ladder position on the pocket map is invalid.");
                 return;
             }
+
+            bool ladderUpExists = pocketMap.thingGrid.ThingsListAt(ladderPosition)
+                .Any(thing => thing.def.defName == "BuildingLadderUp");
+            if (!ladderUpExists)
+            {
+                ThingDef ladderUpDef = DefDatabase<ThingDef>.GetNamed("BuildingLadderUp", false);
+                if (ladderUpDef == null)
+                {
+                    Log.Error("Failed to find ThingDef for BuildingLadderUp.");
+                    return;
+                }
+
+                ThingDef defaultStuff = this.Stuff;
+                Building ladderUp = (Building)ThingMaker.MakeThing(ladderUpDef, defaultStuff);
+                GenSpawn.Spawn(ladderUp, ladderPosition, pocketMap, WipeMode.FullRefund);
+                Log.Message("Replaced impassable or null tile with a ladderUp.");
+            }
+
 
             pawn.Position = ladderPosition;
             pawn.SpawnSetup(pocketMap, true);

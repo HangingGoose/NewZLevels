@@ -1,0 +1,9 @@
+<ModMetaData>
+    <name>NewZLevels</name>
+    <description>This mod is an updated version of the long-deprecated ZLevels mod.</description>
+    <author>HangingGoose</author>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <packageId>hanginggoose.newzlevels</packageId>
+</ModMetaData>

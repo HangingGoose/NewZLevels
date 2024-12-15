@@ -1,0 +1,6 @@
+C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\Mods\NewZLevels\Assemblies\NewZLevels.dll
+C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\Mods\NewZLevels\Assemblies\NewZLevels.pdb
+C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\Mods\NewZLevels\Source\NewZLevels\obj\Debug\NewZLevels.csproj.AssemblyReference.cache
+C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\Mods\NewZLevels\Source\NewZLevels\obj\Debug\NewZLevels.csproj.CoreCompileInputs.cache
+C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\Mods\NewZLevels\Source\NewZLevels\obj\Debug\NewZLevels.dll
+C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\Mods\NewZLevels\Source\NewZLevels\obj\Debug\NewZLevels.pdb

@@ -1,0 +1,106 @@
+<Defs>
+
+  <!-- Boilerplate --> 
+  
+    <ThingDef Name="BuildingBase" Abstract="True">
+        <category>Building</category>
+        <thingClass>Building</thingClass>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <selectable>true</selectable>
+        <drawerType>MapMeshOnly</drawerType>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <repairEffect>Repair</repairEffect>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+        <statBases>
+
+            <SellPriceFactor>0.70</SellPriceFactor>
+
+        </statBases>
+    </ThingDef>
+
+    <!-- Ladder down building definition -->
+    
+    <ThingDef ParentName="BuildingBase">
+        <defName>BuildingLadderDown</defName>
+        <label>ladder down</label>
+        <description>A ladder that goes to a new world down below.</description>
+        <designationCategory>Misc</designationCategory>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.16</fillPercent>
+        <pathCost>0</pathCost>
+        <statBases>
+            <MaxHitPoints>2000</MaxHitPoints>
+            <WorkToBuild>20000</WorkToBuild>
+            <Flammability>0.0</Flammability>
+            <Beauty>-10</Beauty>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+        </stuffCategories>
+        <costStuffCount>30</costStuffCount>
+        <holdsRoof>false</holdsRoof>
+        <canOverlapZones>false</canOverlapZones>
+        <rotatable>false</rotatable>
+        <fertility>0</fertility>
+        <thingClass>NewZLevels.BuildingLadderDown</thingClass>
+        <building>
+            <isInert>false</isInert>
+            <ai_chillDestination>false</ai_chillDestination>
+            <paintable>false</paintable>
+        </building>
+        <graphicData>
+            <drawSize>(1,1.171875)</drawSize>
+            <drawOffset>(0,0,0.25)</drawOffset>
+            <texPath>Things/Building/Furniture/ladderDown</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <!-- Mine building definition -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>BuildingLadderUp</defName>
+        <label>ladder up</label>
+        <description>A ladder that goes up to the next floor!.</description>
+        <designationCategory>Misc</designationCategory>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.16</fillPercent>
+        <pathCost>0</pathCost>
+        <statBases>
+            <MaxHitPoints>2000</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Flammability>0.0</Flammability>
+            <Beauty>-5</Beauty>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+        </stuffCategories>
+        <costStuffCount>30</costStuffCount>
+        <holdsRoof>false</holdsRoof>
+        <canOverlapZones>false</canOverlapZones>
+        <rotatable>false</rotatable>
+        <fertility>0</fertility>
+        <building>
+            <isInert>true</isInert>
+            <ai_chillDestination>false</ai_chillDestination>
+            <paintable>false</paintable>
+        </building>
+        <graphicData>
+            <drawSize>(1,1.3)</drawSize>
+            <drawOffset>(0,0,0.3)</drawOffset>
+            <texPath>Things/Building/Furniture/ladderUp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+            <comps>
+                <li Class="CompProperties_Styleable" />
+                <li Class="CompProperties_Glower">
+                    <glowRadius>3</glowRadius>
+                    <glowColor>(184,136,83,0)</glowColor>
+                </li>
+            </comps>
+    </ThingDef>
+</Defs>

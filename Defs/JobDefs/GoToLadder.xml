@@ -1,0 +1,6 @@
+<Defs>
+    <JobDef>
+        <defName>GoToLadder</defName>
+        <driverClass>NewZLevels.Jobs.JobDriver_GoToLadder</driverClass>
+    </JobDef>
+</Defs>

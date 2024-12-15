@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NewZLevels.Buildings;
 using Verse;
 using Verse.AI;
 
@@ -25,14 +26,14 @@ namespace NewZLevels.Jobs
             {
                 initAction = (() =>
                 {
+                    Log.Message($"Pawn {pawn.Label} is using the ladder.");
                     if (TargetA.Thing is BuildingLadderDown buildingLadderDown)
                     {
-                        Log.Message($"Pawn {pawn.Label} is using the ladder.");
-                        buildingLadderDown.SendPawnDown(pawn);
+                        buildingLadderDown.SendPawn(pawn, "down");
                     }
-                    else
+                    else if (TargetA.Thing is BuildingLadderUp buildingLadderUp)
                     {
-                        Log.Warning($"TargetA is not a BuildingLadderDown for pawn {pawn.Label}");
+                        buildingLadderUp.SendPawn(pawn, "up");
                     }
                 }),
                 defaultCompleteMode = ToilCompleteMode.Instant

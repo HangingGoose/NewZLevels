@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace NewZLevels
+namespace NewZLevels.Defs
 {
     [DefOf]
     public static class NewZLevelsDefOf

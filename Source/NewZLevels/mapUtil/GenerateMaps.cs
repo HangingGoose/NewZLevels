@@ -2,11 +2,11 @@ using System;
 using System.Linq;
 using Verse;
 
-namespace NewZLevels
+namespace NewZLevels.mapUtil
 {
     public static class GenerateMaps
     {
-        public static Map CreateUndergroundPocketMap(Map sourceMap, int pocketZLevel)
+        public static Map CreateUndergroundPocketMap(Map sourceMap)
         {
             int width = sourceMap.Size.x;
             int height = sourceMap.Size.z;
@@ -20,9 +20,9 @@ namespace NewZLevels
                 return null;
             }
 
-            Log.Message(String.Format("Y value of cells:") + sourceMap.AllCells.First().y);
-            Log.Message(String.Format("Width: {0}", width));
-            Log.Message(String.Format("Height: {0}", height));
+            Log.Message("Y value of cells:" + sourceMap.AllCells.First().y);
+            Log.Message("Width: " + width);
+            Log.Message("Height: " + height);
 
             Map pocketMap = PocketMapUtility.GeneratePocketMap(
                 new IntVec3(width, depth, height),

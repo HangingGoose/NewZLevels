@@ -45,7 +45,7 @@
         <canOverlapZones>false</canOverlapZones>
         <rotatable>false</rotatable>
         <fertility>0</fertility>
-        <thingClass>NewZLevels.BuildingLadderDown</thingClass>
+        <thingClass>NewZLevels.Buildings.BuildingLadderDown</thingClass>
         <building>
             <isInert>false</isInert>
             <ai_chillDestination>false</ai_chillDestination>
@@ -63,7 +63,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>BuildingLadderUp</defName>
         <label>ladder up</label>
-        <description>A ladder that goes up to the next floor!.</description>
+        <description>A ladder that goes up to the next floor.</description>
         <designationCategory>Misc</designationCategory>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -71,7 +71,7 @@
         <pathCost>0</pathCost>
         <statBases>
             <MaxHitPoints>2000</MaxHitPoints>
-            <WorkToBuild>1000</WorkToBuild>
+            <WorkToBuild>2000</WorkToBuild>
             <Flammability>0.0</Flammability>
             <Beauty>-5</Beauty>
         </statBases>
@@ -84,8 +84,9 @@
         <canOverlapZones>false</canOverlapZones>
         <rotatable>false</rotatable>
         <fertility>0</fertility>
+        <thingClass>NewZLevels.Buildings.BuildingLadderUp</thingClass>
         <building>
-            <isInert>true</isInert>
+            <isInert>false</isInert>
             <ai_chillDestination>false</ai_chillDestination>
             <paintable>false</paintable>
         </building>
@@ -96,9 +97,8 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
             <comps>
-                <li Class="CompProperties_Styleable" />
                 <li Class="CompProperties_Glower">
-                    <glowRadius>3</glowRadius>
+                    <glowRadius>2</glowRadius>
                     <glowColor>(184,136,83,0)</glowColor>
                 </li>
             </comps>

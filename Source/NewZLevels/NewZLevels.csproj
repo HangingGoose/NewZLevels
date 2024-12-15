@@ -51,11 +51,17 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="BuildingLadderDown.cs" />
-        <Compile Include="GenerateMaps.cs" />
+        <Compile Include="Buildings\BuildingLadder.cs" />
+        <Compile Include="Buildings\BuildingLadderDown.cs" />
+        <Compile Include="Buildings\BuildingLadderUp.cs" />
+        <Compile Include="Defs\NewZLevelsDefOf.cs" />
         <Compile Include="GenSteps\GenStep_Underground.cs" />
         <Compile Include="Jobs\JobDriver_GoToLadder.cs" />
-        <Compile Include="NewZLevelsDefOf.cs" />
+        <Compile Include="LevelsController.cs" />
+        <Compile Include="LevelClasses\Level.cs" />
+        <Compile Include="LevelClasses\Levels.cs" />
+        <Compile Include="Main.cs" />
+        <Compile Include="mapUtil\GenerateMaps.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="ZLevel.cs" />
     </ItemGroup>

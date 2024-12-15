@@ -74,7 +74,7 @@ namespace NewZLevels
             IntVec3 ladderPosition = new IntVec3(this.Position.x, 0, this.Position.z);
             foreach (IntVec3 cell in pocketMap.AllCells)
             {
-                Log.Message(String.Format("Cell (%d,%d) exists", cell.x, cell.z));
+                Log.Message(String.Format("Cell ({0},{1}) exists", cell.x, cell.z));
             }
             if (!ladderPosition.IsValid || !pocketMap.AllCells.Contains(ladderPosition))
             {

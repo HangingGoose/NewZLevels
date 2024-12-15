@@ -3,4 +3,6 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005Cmatti_005CRimworld_002DSteamRIP_002Ecom_005CRimWorld_0020v1_002E5_002E4136_005CRimWorldWin64_005FData_005CManaged_005CUnityEngine_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\matti\Rimworld-SteamRIP.com\RimWorld v1.5.4136\RimWorldWin64_Data\Managed\Assembly-CSharp.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\matti\Rimworld\RimWorld v1.5.4136\RimWorldWin64_Data\Managed\Assembly-CSharp.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8.1\System.Core.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

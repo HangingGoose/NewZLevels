@@ -7,9 +7,6 @@ namespace NewZLevels.Buildings
 {
     public class BuildingLadderUp : BuildingLadder
     {
-        public BuildingLadderUp(int zLevel) : base(zLevel)
-        {
-        }
 
         public BuildingLadderUp(): base()
         {

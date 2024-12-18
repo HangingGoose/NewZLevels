@@ -27,11 +27,11 @@ namespace NewZLevels.Jobs
                 initAction = (() =>
                 {
                     Log.Message($"Pawn {pawn.Label} is using the ladder.");
-                    if (TargetA.Thing is BuildingLadderDown buildingLadderDown)
+                    if (TargetA.Thing is Building_LadderDown buildingLadderDown)
                     {
                         buildingLadderDown.SendPawn(pawn, "down");
                     }
-                    else if (TargetA.Thing is BuildingLadderUp buildingLadderUp)
+                    else if (TargetA.Thing is Building_LadderUp buildingLadderUp)
                     {
                         buildingLadderUp.SendPawn(pawn, "up");
                     }
